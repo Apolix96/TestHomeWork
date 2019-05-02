@@ -1,0 +1,31 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model DBASEmicro.Models.MicroController
+
+    <dl>
+        <dt>Название микроконтроллера</dt>
+        <dd>
+            @Html.DisplayFor(model => model.nameMicro)
+        </dd>
+        <dt>Производитель</dt>
+        <dd>
+            @Html.DisplayFor(model => model.manufacture)
+        </dd>
+        <dt>Цена</dt>
+        <dd>
+            @Html.DisplayFor(model => model.price)
+        </dd>
+        <dt>Серия</dt>
+        <dd>
+            @Html.DisplayFor(model => model.Serial)
+        </dd>
+        <dt>Форма памяти</dt>
+        <dd>
+            @Html.DisplayFor(model => model.Pamyat)
+        </dd>
+        <dt>Тактовая частота</dt>
+        <dd>
+            @Html.DisplayFor(model => model.taktovayaChastota)
+        </dd>
+    </dl>

@@ -1,0 +1,25 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model DBASEmicro.Models.MicroController
+<h2>Удаление</h2>
+<dl>
+    <dt>Название микроконтроллера</dt>
+    <dd>
+        @Html.DisplayFor(model => model.nameMicro)
+    </dd>
+
+    <dt>Производитель</dt>
+    <dd>
+        @Html.DisplayFor(model => model.manufacture)
+    </dd>
+    <dt>Цена</dt>
+    <dd>
+        @Html.DisplayFor(model => model.price)
+    </dd>
+</dl>
+
+@using (Html.BeginForm())
+{
+    <input type="submit" value="Удалить" />
+}

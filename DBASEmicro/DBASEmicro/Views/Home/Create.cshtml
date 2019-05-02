@@ -1,0 +1,42 @@
+﻿@model DBASEmicro.Models.MicroController
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>Новый микроконтроллер</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.nameMicro, "Название микроконтроллера")
+    <br />
+    @Html.EditorFor(model => model.nameMicro)
+    <br /><br />
+    @Html.LabelFor(model => model.manufacture, "Производитель")
+    <br />
+    @Html.EditorFor(model => model.manufacture)
+    <br /><br />
+    @Html.LabelFor(model => model.price, "Цена")
+    <br />
+    @Html.EditorFor(model => model.price)
+    <br /><br />
+    @Html.LabelFor(model => model.Serial, "Серия")
+    <br />
+    @Html.EditorFor(model => model.Serial)
+    <br /><br />
+    @Html.LabelFor(model => model.Core, "Ядро")
+    <br />
+    @Html.EditorFor(model => model.Core)
+    <br /><br />
+    @Html.LabelFor(model => model.Pamyat, "Тип Памяти")
+    <br />
+    @Html.EditorFor(model => model.Pamyat)
+    <br /><br />
+    @Html.LabelFor(model => model.taktovayaChastota, "Тактовая частота")
+    <br />
+    @Html.EditorFor(model => model.taktovayaChastota)
+    <br /><br />
+
+    <input type="submit" value="Добавить" />
+}

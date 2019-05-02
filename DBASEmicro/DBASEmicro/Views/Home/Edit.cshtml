@@ -1,0 +1,30 @@
+﻿@{
+   
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model DBASEmicro.Models.MicroController
+
+<h2>Микроконтроллер @Model.IDmicro</h2>
+@using (Html.BeginForm("Edit", "Home", FormMethod.Post))
+{
+    <fieldset>
+        @Html.HiddenFor(m => m.IDmicro)
+        <p>
+            @Html.LabelFor(m => m.nameMicro, "Название микроконтроллера")
+            <br />
+            @Html.EditorFor(m => m.nameMicro)
+        </p>
+        <p>
+            @Html.LabelFor(m => m.manufacture, "Производитель")
+            <br />
+            @Html.EditorFor(m => m.manufacture)
+
+        </p>
+        <p>
+            @Html.LabelFor(m => m.price, "Цена")
+            <br />
+            @Html.EditorFor(m => m.price)
+        </p>
+        <p><input type="submit" value="Отправить" /></p>
+    </fieldset>
+}

@@ -1,0 +1,38 @@
+﻿
+<!DOCTYPE html>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/Styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div  class="head">
+        <center><h1>Микроконтроллеры</h1></center>
+    </div>
+    <div>
+        <table >
+            <tr class="header">
+                <td class="td"><p>Название Микроконтроллера</p></td>
+                <td class="td"><p>Производитель</p></td>
+            </tr>
+            @foreach (var b in ViewBag.MicCon)
+            {
+        <tr>
+            <td><p><a href="/Home/Infor/@b.IDmicro">@b.nameMicro </a></p></td>
+            <td><p>@b.manufacture</p></td>
+            <td><p>@b.price</p></td>
+            <td><p><a href="/Home/Buy/@b.IDmicro">Купить</a></p></td>
+            <td><p><a href="/Home/Create/@b.IDmicro">Создать</a></p></td>
+            <td><p><a href="/Home/Delete/@b.IDmicro">Удалить</a></p></td>
+            <td><p><a href="/Home/Edit/@b.IDmicro">Изменить</a></p></td>
+        </tr>
+            }
+        </table>
+
+    </div>
+</body>
+</html>

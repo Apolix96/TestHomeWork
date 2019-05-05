@@ -20,9 +20,7 @@ namespace DBASEmicro.Controllers
        
         public ActionResult Index()
         {
-            IEnumerable<MicroController> microControllers = ConM.MicCon;
-            ViewBag.MicCon = microControllers;
-
+            ViewBag.MicCon = extractSet.DataUse();
             return View();
         }
         // информация
